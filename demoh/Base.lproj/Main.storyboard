@@ -189,13 +189,95 @@
                     <view key="view" contentMode="scaleToFill" id="uLJ-Tk-N2e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQC-JF-nhw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="706"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQh-38-02r">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="706"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DkF-fa-9bL">
+                                                <rect key="frame" x="16" y="16" width="382" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVM-xV-kH4">
+                                                <rect key="frame" x="16" y="62" width="382" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa edad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anp-kF-l9d">
+                                                <rect key="frame" x="16" y="108" width="382" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa fecha de nacimiento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeY-Mh-6qV">
+                                                <rect key="frame" x="16" y="154" width="382" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="anp-kF-l9d" secondAttribute="trailing" constant="16" id="4XM-mX-MwN"/>
+                                            <constraint firstItem="DkF-fa-9bL" firstAttribute="top" secondItem="CQh-38-02r" secondAttribute="top" constant="16" id="9p6-4L-03z"/>
+                                            <constraint firstAttribute="trailing" secondItem="FeY-Mh-6qV" secondAttribute="trailing" constant="16" id="9qh-S0-TJn"/>
+                                            <constraint firstItem="nVM-xV-kH4" firstAttribute="leading" secondItem="CQh-38-02r" secondAttribute="leading" constant="16" id="HUo-WR-IIa"/>
+                                            <constraint firstItem="nVM-xV-kH4" firstAttribute="top" secondItem="DkF-fa-9bL" secondAttribute="bottom" constant="16" id="RQg-6y-Ues"/>
+                                            <constraint firstAttribute="trailing" secondItem="DkF-fa-9bL" secondAttribute="trailing" constant="16" id="VID-QR-Dz0"/>
+                                            <constraint firstItem="FeY-Mh-6qV" firstAttribute="top" secondItem="anp-kF-l9d" secondAttribute="bottom" constant="16" id="ZkC-jJ-uzP"/>
+                                            <constraint firstItem="DkF-fa-9bL" firstAttribute="leading" secondItem="CQh-38-02r" secondAttribute="leading" constant="16" id="gAs-7A-SCc"/>
+                                            <constraint firstAttribute="trailing" secondItem="nVM-xV-kH4" secondAttribute="trailing" constant="16" id="jqh-8V-Xbn"/>
+                                            <constraint firstItem="FeY-Mh-6qV" firstAttribute="leading" secondItem="CQh-38-02r" secondAttribute="leading" constant="16" id="kKr-Pb-tgf"/>
+                                            <constraint firstItem="anp-kF-l9d" firstAttribute="top" secondItem="nVM-xV-kH4" secondAttribute="bottom" constant="16" id="uUe-gj-COC"/>
+                                            <constraint firstItem="anp-kF-l9d" firstAttribute="leading" secondItem="CQh-38-02r" secondAttribute="leading" constant="16" id="wnw-G8-xrA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CQh-38-02r" firstAttribute="centerX" secondItem="VQC-JF-nhw" secondAttribute="centerX" id="52g-w2-h60"/>
+                                    <constraint firstAttribute="trailing" secondItem="CQh-38-02r" secondAttribute="trailing" id="Fay-RV-mhi"/>
+                                    <constraint firstItem="CQh-38-02r" firstAttribute="leading" secondItem="VQC-JF-nhw" secondAttribute="leading" id="Oya-dY-iZI"/>
+                                    <constraint firstItem="CQh-38-02r" firstAttribute="centerY" secondItem="VQC-JF-nhw" secondAttribute="centerY" id="VOr-zc-T9L"/>
+                                    <constraint firstAttribute="bottom" secondItem="CQh-38-02r" secondAttribute="bottom" id="XkU-Yz-R8j"/>
+                                    <constraint firstItem="CQh-38-02r" firstAttribute="top" secondItem="VQC-JF-nhw" secondAttribute="top" id="oiB-XX-qSl"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-OV-Snq">
+                                <rect key="frame" x="16" y="810" width="382" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Crear"/>
+                                <connections>
+                                    <action selector="alClickearBotonCrearCliente:" destination="5VE-P7-uS1" eventType="touchUpInside" id="fJg-Nh-BBS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PzJ-OV-Snq" firstAttribute="bottom" secondItem="OIQ-da-9Bh" secondAttribute="bottom" constant="-16" id="8iK-s6-UFi"/>
+                            <constraint firstItem="PzJ-OV-Snq" firstAttribute="top" secondItem="VQC-JF-nhw" secondAttribute="bottom" constant="16" id="AMZ-U4-C04"/>
+                            <constraint firstItem="VQC-JF-nhw" firstAttribute="top" secondItem="OIQ-da-9Bh" secondAttribute="top" id="BvR-l4-HM4"/>
+                            <constraint firstItem="PzJ-OV-Snq" firstAttribute="leading" secondItem="OIQ-da-9Bh" secondAttribute="leading" constant="16" id="JwP-xD-CPf"/>
+                            <constraint firstItem="OIQ-da-9Bh" firstAttribute="trailing" secondItem="PzJ-OV-Snq" secondAttribute="trailing" constant="16" id="UrE-v9-1nG"/>
+                            <constraint firstItem="VQC-JF-nhw" firstAttribute="trailing" secondItem="OIQ-da-9Bh" secondAttribute="trailing" id="X8x-fk-cwc"/>
+                            <constraint firstItem="VQC-JF-nhw" firstAttribute="leading" secondItem="OIQ-da-9Bh" secondAttribute="leading" id="uPv-hF-jTf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OIQ-da-9Bh"/>
                     </view>
+                    <connections>
+                        <outlet property="textFieldApellido" destination="nVM-xV-kH4" id="udV-o2-C35"/>
+                        <outlet property="textFieldEdad" destination="anp-kF-l9d" id="HVR-eF-5Zr"/>
+                        <outlet property="textFieldFechaNacimiento" destination="FeY-Mh-6qV" id="t4f-yC-TC6"/>
+                        <outlet property="textFieldNombre" destination="DkF-fa-9bL" id="i0L-uh-BUz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3w-ly-QMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3154" y="96"/>
+            <point key="canvasLocation" x="3153.6231884057975" y="95.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e9Z-OE-7Gc">

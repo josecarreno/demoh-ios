@@ -28,8 +28,12 @@ extension UIViewController {
     }
     
     func mostrarError(error: Error) {
+        mostrarError(error: error.localizedDescription)
+    }
+    
+    func mostrarError(error: String) {
         let alert = UIAlertController(title: "Error",
-                                      message: error.localizedDescription,
+                                      message: error,
                                       preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Aceptar", style: .default))

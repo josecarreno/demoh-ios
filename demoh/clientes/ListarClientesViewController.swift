@@ -3,6 +3,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class ListarClientesViewController: UITableViewController {
+    
     private var ref: DatabaseReference = Database.database().reference()
     
     private var clientes: [Cliente] = []

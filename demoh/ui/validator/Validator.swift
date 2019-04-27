@@ -4,6 +4,7 @@ import Foundation
 
 public enum ValidationError: Error {
     case email
+    case required
     case passwordRequired
     case passwordTooShort
 }
@@ -12,6 +13,7 @@ extension ValidationError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .email: return NSLocalizedString("Correo inválido", comment: "")
+        case .required: return NSLocalizedString("Completa los campos requridos", comment: "")
         case .passwordRequired: return NSLocalizedString("Contraseña requerida", comment: "")
         case .passwordTooShort: return NSLocalizedString("La contraseña debe tener al menos 6 caracteres", comment: "")
         }
@@ -23,6 +25,7 @@ protocol ValidatorConvertible {
 }
 
 enum ValidatorType {
+    case required
     case email
     case password
 }
@@ -30,9 +33,18 @@ enum ValidatorType {
 enum VaildatorFactory {
     static func validatorFor(type: ValidatorType) -> ValidatorConvertible {
         switch type {
+        case .required: return RequiredValidator()
         case .email: return EmailValidator()
         case .password: return PasswordValidator()
         }
+    }
+}
+
+struct RequiredValidator: ValidatorConvertible {
+    func validated(_ value: String) throws -> String {
+        guard value != "" else {throw ValidationError.required}
+        
+        return value
     }
 }
 
