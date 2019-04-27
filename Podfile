@@ -7,6 +7,7 @@ target 'demoh' do
   # Pods for demoh
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'demohTests' do
     inherit! :search_paths
