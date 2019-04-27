@@ -5,6 +5,8 @@ target 'demoh' do
   use_frameworks!
 
   # Pods for demoh
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
   target 'demohTests' do
     inherit! :search_paths
