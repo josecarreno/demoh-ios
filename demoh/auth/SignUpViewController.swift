@@ -1,7 +1,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
     @IBOutlet weak var textFieldCorreo: UITextField!
     @IBOutlet weak var textFieldContrasenia: UITextField!
@@ -10,24 +10,15 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
-    }
-    
-    @IBAction func alClickearAcceder(_ sender: UIButton) {
+    @IBAction func alClickearBotonCrear(_ sender: UIButton) {
         guard let authModel = self.validarInputs() else { return }
         
         self.mostrarCargando(onView: self.view)
         
-        Auth.auth().signIn(withEmail: authModel.correo,
-                           password: authModel.constrasenia) { [weak self] user, error in
-                            guard let strongSelf = self else { return }
-                            strongSelf.ocultarCargando()
-                            strongSelf.manejarRespuesta(error)
+        Auth.auth().createUser(withEmail: authModel.correo,
+                               password: authModel.constrasenia) { authResult, error in
+                                self.ocultarCargando()
+                                self.manejarRespuesta(error)
         }
     }
     
@@ -35,7 +26,7 @@ class LoginViewController: UIViewController {
         if (error != nil) {
             self.mostrarError(error: error!)
         } else {
-            self.irAListaClientes()
+            self.mostrarExito(accion: { action in self.regresar() })
         }
     }
     
@@ -52,10 +43,17 @@ class LoginViewController: UIViewController {
         return nil
     }
     
-    private func irAListaClientes() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let navigationController = storyboard.instantiateViewController(withIdentifier: "MainNavigationController")
+    private func mostrarExito(accion: @escaping ((UIAlertAction) -> Void)) {
+        let alert = UIAlertController(title: "Cuenta creada",
+                                      message: "Usa tu nueva cuenta para acceder",
+                                      preferredStyle: .alert)
         
-        self.present(navigationController, animated: false, completion: nil)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: accion) )
+        
+        self.present(alert, animated: true)
+    }
+    
+    private func regresar() {
+        navigationController?.popViewController(animated: true)
     }
 }

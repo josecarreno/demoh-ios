@@ -9,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        configurarControllerInicialSegunSesion()
         return true
     }
 
@@ -33,7 +34,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    private func configurarControllerInicialSegunSesion() {
+        if (Auth.auth().currentUser == nil) {
+            configurarControllerInicial(withIdentifier: "AuthNavigationController")
+        } else {
+            configurarControllerInicial(withIdentifier: "MainNavigationController")
+        }
+    }
+    
+    private func configurarControllerInicial(withIdentifier identifier: String) {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+    }
 }
 

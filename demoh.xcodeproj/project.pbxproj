@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82073F2A2274DF6900018297 /* UiViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82073F292274DF6900018297 /* UiViewControllerExtensions.swift */; };
+		82073F2D2274E1D800018297 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82073F2C2274E1D800018297 /* Validator.swift */; };
+		82073F312274E40800018297 /* UiTextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82073F302274E40800018297 /* UiTextFieldExtensions.swift */; };
+		82073F342274E6F600018297 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82073F332274E6F600018297 /* AuthModel.swift */; };
 		8209AF082274396A00A9E807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209AF072274396A00A9E807 /* AppDelegate.swift */; };
 		8209AF0A2274396A00A9E807 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209AF092274396A00A9E807 /* LoginViewController.swift */; };
 		8209AF0D2274396A00A9E807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8209AF0B2274396A00A9E807 /* Main.storyboard */; };
@@ -14,7 +18,7 @@
 		8209AF122274396C00A9E807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8209AF102274396C00A9E807 /* LaunchScreen.storyboard */; };
 		8209AF1D2274396C00A9E807 /* demohTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209AF1C2274396C00A9E807 /* demohTests.swift */; };
 		8286B00422744D2700980212 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8286B00322744D2700980212 /* GoogleService-Info.plist */; };
-		8286B00822746CCE00980212 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8286B00722746CCE00980212 /* SignInViewController.swift */; };
+		8286B00822746CCE00980212 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8286B00722746CCE00980212 /* SignUpViewController.swift */; };
 		8286B00B2274869F00980212 /* ListarClientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8286B00A2274869F00980212 /* ListarClientesViewController.swift */; };
 		8286B00D22748C0A00980212 /* CrearClienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8286B00C22748C0A00980212 /* CrearClienteViewController.swift */; };
 		C576936D518D3924056ADCA4 /* Pods_demoh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5935B0C0DE4BED9D1E05B419 /* Pods_demoh.framework */; };
@@ -36,6 +40,10 @@
 		42220E1BF1BE05A6FE2FA94C /* Pods-demoh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoh.release.xcconfig"; path = "Target Support Files/Pods-demoh/Pods-demoh.release.xcconfig"; sourceTree = "<group>"; };
 		5935B0C0DE4BED9D1E05B419 /* Pods_demoh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demoh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74ACF4400F71459DA1835252 /* Pods-demohTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demohTests.debug.xcconfig"; path = "Target Support Files/Pods-demohTests/Pods-demohTests.debug.xcconfig"; sourceTree = "<group>"; };
+		82073F292274DF6900018297 /* UiViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtensions.swift; sourceTree = "<group>"; };
+		82073F2C2274E1D800018297 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		82073F302274E40800018297 /* UiTextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiTextFieldExtensions.swift; sourceTree = "<group>"; };
+		82073F332274E6F600018297 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		8209AF042274396A00A9E807 /* demoh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8209AF072274396A00A9E807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8209AF092274396A00A9E807 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +55,7 @@
 		8209AF1C2274396C00A9E807 /* demohTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demohTests.swift; sourceTree = "<group>"; };
 		8209AF1E2274396C00A9E807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8286B00322744D2700980212 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8286B00722746CCE00980212 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8286B00722746CCE00980212 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8286B00A2274869F00980212 /* ListarClientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListarClientesViewController.swift; sourceTree = "<group>"; };
 		8286B00C22748C0A00980212 /* CrearClienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearClienteViewController.swift; sourceTree = "<group>"; };
 		95EEAB0F311E78E16A0CFFBA /* Pods-demoh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoh.debug.xcconfig"; path = "Target Support Files/Pods-demoh/Pods-demoh.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +91,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		82073F282274DF4300018297 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				82073F2B2274E13700018297 /* validator */,
+				82073F292274DF6900018297 /* UiViewControllerExtensions.swift */,
+				82073F302274E40800018297 /* UiTextFieldExtensions.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		82073F2B2274E13700018297 /* validator */ = {
+			isa = PBXGroup;
+			children = (
+				82073F2C2274E1D800018297 /* Validator.swift */,
+			);
+			path = validator;
+			sourceTree = "<group>";
+		};
+		82073F322274E6E000018297 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				82073F332274E6F600018297 /* AuthModel.swift */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
 		8209AEFB2274396A00A9E807 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +140,7 @@
 		8209AF062274396A00A9E807 /* demoh */ = {
 			isa = PBXGroup;
 			children = (
+				82073F282274DF4300018297 /* ui */,
 				8286B00622744FCF00980212 /* auth */,
 				8286B0092274866300980212 /* clientes */,
 				8209AF072274396A00A9E807 /* AppDelegate.swift */,
@@ -130,8 +165,9 @@
 		8286B00622744FCF00980212 /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				82073F322274E6E000018297 /* Modelo */,
 				8209AF092274396A00A9E807 /* LoginViewController.swift */,
-				8286B00722746CCE00980212 /* SignInViewController.swift */,
+				8286B00722746CCE00980212 /* SignUpViewController.swift */,
 			);
 			path = auth;
 			sourceTree = "<group>";
@@ -337,8 +373,12 @@
 				8209AF0A2274396A00A9E807 /* LoginViewController.swift in Sources */,
 				8286B00D22748C0A00980212 /* CrearClienteViewController.swift in Sources */,
 				8209AF082274396A00A9E807 /* AppDelegate.swift in Sources */,
+				82073F2A2274DF6900018297 /* UiViewControllerExtensions.swift in Sources */,
+				82073F2D2274E1D800018297 /* Validator.swift in Sources */,
+				82073F312274E40800018297 /* UiTextFieldExtensions.swift in Sources */,
 				8286B00B2274869F00980212 /* ListarClientesViewController.swift in Sources */,
-				8286B00822746CCE00980212 /* SignInViewController.swift in Sources */,
+				8286B00822746CCE00980212 /* SignUpViewController.swift in Sources */,
+				82073F342274E6F600018297 /* AuthModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

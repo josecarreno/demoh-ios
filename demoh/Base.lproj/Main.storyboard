@@ -40,7 +40,7 @@
                                                 <rect key="frame" x="0.0" y="29" width="286" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLR-ZS-6dU">
                                                 <rect key="frame" x="0.0" y="83" width="286" height="21"/>
@@ -52,7 +52,7 @@
                                                 <rect key="frame" x="0.0" y="112" width="286" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,6 +116,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Isn-ie-YJ7"/>
+                    <connections>
+                        <outlet property="textFieldContrasenia" destination="HRQ-T6-pY8" id="MFd-KV-Hsz"/>
+                        <outlet property="textFieldCorreo" destination="DwQ-xd-gDO" id="Xg5-sQ-bFF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,6 +149,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Clientes" id="R3B-vG-iMm">
+                        <barButtonItem key="leftBarButtonItem" title="Salir" id="o1E-Cb-uZZ">
+                            <connections>
+                                <action selector="alClickerSalir:" destination="8Xh-SW-nDk" id="lAl-hL-zBF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="R51-vu-HWZ">
                             <connections>
                                 <segue destination="5VE-P7-uS1" kind="show" id="N0Q-xO-imh"/>
@@ -190,7 +199,7 @@
         <!--Crear cuenta-->
         <scene sceneID="ZHR-wv-sVg">
             <objects>
-                <viewController title="Crear cuenta" id="j9n-FE-Y7T" customClass="SignInViewController" customModule="demoh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Crear cuenta" id="j9n-FE-Y7T" customClass="SignUpViewController" customModule="demoh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rox-84-Hr9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +217,7 @@
                                         <rect key="frame" x="0.0" y="37" width="286" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVx-A5-WA0">
                                         <rect key="frame" x="0.0" y="83" width="286" height="21"/>
@@ -220,12 +229,15 @@
                                         <rect key="frame" x="0.0" y="120" width="286" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-Mv-v5u">
                                         <rect key="frame" x="0.0" y="186" width="286" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Crear"/>
+                                        <connections>
+                                            <action selector="alClickearBotonCrear:" destination="j9n-FE-Y7T" eventType="touchUpInside" id="hIJ-73-5ay"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -257,6 +269,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i8x-9K-FAd"/>
                     </view>
+                    <connections>
+                        <outlet property="textFieldContrasenia" destination="29E-nJ-xdg" id="i9S-fM-FJg"/>
+                        <outlet property="textFieldCorreo" destination="xRQ-Nv-chD" id="e8t-fs-azC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAx-3l-XTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,7 +281,7 @@
         <!--Auth-->
         <scene sceneID="yJM-tI-1b5">
             <objects>
-                <navigationController title="Auth" automaticallyAdjustsScrollViewInsets="NO" id="2mW-co-Pw6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AuthNavigationController" title="Auth" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2mW-co-Pw6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VQm-wz-O9Y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

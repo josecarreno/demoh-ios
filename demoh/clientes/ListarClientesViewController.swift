@@ -1,22 +1,32 @@
 import UIKit
+import FirebaseAuth
 
 class ListarClientesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    
+    @IBAction func alClickerSalir(_ sender: Any) {
+        cerrarSesion()
+        irALogin()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func cerrarSesion() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
-    */
+    
+    private func irALogin() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = storyboard.instantiateViewController(withIdentifier: "AuthNavigationController")
+        
+        self.present(navigationController, animated: false, completion: nil)
+    }
 
 }
